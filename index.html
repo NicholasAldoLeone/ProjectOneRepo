@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Crypto Project</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  <link src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css/>" rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="assets/css/style.css">
@@ -27,7 +28,7 @@
 
   <!-- start of nav -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Info on Crypto</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
       aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -37,17 +38,8 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
         </li>
-        <!-- <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li> -->
-        <!-- <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li> -->
-        <!-- <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li> -->
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" id = "searchInput" type="text" for = "searchBtn" placeholder="Search">
@@ -73,6 +65,7 @@
         src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
         alt="Card image">
 
+
       <!-- End of Image -->
       <div class="card-body">
         <p class="card-text" id="imageText">Some quick example text to build on the card title and make up the bulk of
@@ -80,19 +73,19 @@
           content.</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li id ="current-price"class="list-group-item">Current Price: </li>
+        <li id ="circulating-supply"class="list-group-item">Total Circulating Supply:</li>
+        <li id ="total-supply"class="list-group-item">Total Supply</li>
+        <li id ="home-page"class="list-group-item">Visut Us @ </li>
+        <li id ="crypto-exchange"class="list-group-item">Buy here @ </li>
+        
       </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
+     
       <div class="card-footer text-muted">
-        2 days ago
+        Copyright &copy
       </div>
     </div>
-    <div class="card">
+    <!-- <div class="card">
       <div class="card-body">
         <h4 class="card-title">Card title</h4>
         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -101,7 +94,7 @@
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
       </div>
-    </div>
+    </div> -->
 
   </div>
   <!-- End of card body -->
@@ -119,5 +112,16 @@
 </body>
 <br>
 <br>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
+
 
 </html>
