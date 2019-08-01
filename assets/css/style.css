@@ -21,6 +21,14 @@
   text-align: center;
 }
 
+#searchInput{
+  border-radius: 4px;
+}
+
+#searchBtn{
+  border-radius: 4px;
+}
+
  @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600");
  :root {
    --blue: #007bff;
