@@ -1,4 +1,4 @@
-# CryptoCurreny Nitty Gritty
+# CryptoCurrency Nitty Gritty
 The users should be able to search for any CryptoCurrency and retrieve data related to current price, circulating supply, total supply and where to purchase.
 
 ## Team Members
