@@ -20,3 +20,14 @@
     justify-content: center;
   }
 
+  
+  #cryptoInformation {
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  #cryptoImg {
+    margin: 0 auto;
+  
+  }
