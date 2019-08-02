@@ -7,11 +7,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Crypto Project</title>
 
-  <link src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css/>" rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  <!-- Bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+  <!-- Our CSS  -->
+  <link rel="stylesheet" href="assets/css/bootswatch.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- animate.css -->
 
 </head>
 
@@ -19,7 +26,7 @@
 <body>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Crypto </h1>
+      <h1 class="animated jello">Crypto </h1>
       <p class="lead">Easy to use inferface to get all the info you need on Crypto Currency</p>
     </div>
   </div>
@@ -27,7 +34,7 @@
 
   <!-- start of nav -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Info on Crypto</a>
+    <a class="navbar-brand" href="#">Search for info on Crypto</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
       aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -51,16 +58,41 @@
   <br>
   <!-- end of nav -->
 
-  <div class="container">
+  <div class="container" id = "cryptoInformation"> 
     <!-- Card Body where info goes -->
-    <div class="card mb-3" id = "cryptoInformation">
-      <h3 id="cyrpto-name-input" class="card-header">Cryoto Name Goes Here</h3>
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <h6 class="card-subtitle text-muted">Support card subtitle</h6>
-      </div>
-     
+    <div class="card mb-3">
+      <h3 id="cyrpto-name-input" class="card-header">Why Crypto?</h3>
+      <!-- <div class="card-body">
+        <h5 class="card-title"></h5>
+        <h6 class="card-subtitle text-muted"></h6>
+      </div> -->
 
+      <!-- Image -->
+      <div class="card-body">
+        <div class="flex-center mb-5">
+
+          <img id="cryptoImg" style="height: 200px; width: 200px; display: block;"
+            src="https://www.unlock-bc.com/sites/default/files/news/images/thumbnail/ss-crypto-future.jpg"
+            alt="Card image">
+        </div>
+
+
+        <!-- End of Image -->
+
+        <p class="card-text" id="imageText">Beginners guide to CryptoCurrency. Get all the data you need to get started
+          without feeling overwhemled.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li id="current-price" class="list-group-item"></li>
+        <li id="circulating-supply" class="list-group-item"></li>
+        <li id="total-supply" class="list-group-item"></li>
+        <li id="home-page" class="list-group-item"></li>
+        <li id="crypto-exchange" class="list-group-item"></li>
+
+      </ul>
+
+      <div class="card-footer text-muted">
+        Copyright &copy
       </div>
     </div>
   </div>
@@ -68,21 +100,19 @@
   <!-- End of card body -->
   <!-- end of JUMBO -->
 
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-      </p>
-    </div>
-  </footer>
-
   <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
 
   <script src="assets/javascript/javascript.js"></script>
 
@@ -90,6 +120,13 @@
 <br>
 <br>
 
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Project One </strong>
+    </p>
+  </div>
+</footer>
 
 
 </html>

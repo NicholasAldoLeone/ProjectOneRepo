@@ -7,6 +7,8 @@ var currentPrice = 0;
 var exchange = "";
 var image = "";
 var homepage = "";
+var description = "";
+var name = "";
 
 var name = "";
 var symbol = "";
@@ -49,7 +51,7 @@ $("#searchBtn").on("click", function () {
         cryptoTitleBody.append(specialTitle);
 
         var cryptoInfoImg = $("<img>").attr("id", "cryptoImg").attr("src", image);
-        cryptoInfoImg.attr("style", "height: 300px; width: 30%; display: block;");
+        cryptoInfoImg.attr("style", "height: 200px; width: 200px; display: block;");
         cryptoInfoImg.attr("alt", "Card Image");
 
         var cryptoCardBody = $("<div>").addClass("card-body");
