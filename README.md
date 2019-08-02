@@ -1,4 +1,4 @@
-# CryptoCurreny Nitty Gritty
+# CryptoCurrency Nitty Gritty
 The users should be able to search for any CryptoCurrency and retrieve data related to current price, circulating supply, total supply and where to purchase.
 
 ## Team Members
@@ -16,5 +16,5 @@ Rodney James, Jay Guevara, Nicholas Leone
 5. Make firebase Database-Code javascript logic
 
 ### Sketch
-![Project Sketch](/images/projectSketch.png)
+![Project Sketch](assets/images/projectSketch.png)
 

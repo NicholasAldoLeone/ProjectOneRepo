@@ -42,10 +42,18 @@ $("#searchBtn").on("click", function () {
         homepage = response.links.homepage[0];
         image = response.image.large;
         exchange = response.tickers[0].trade_url
+        
 
         console.log(response)
 
         $("#cryptoImg").attr("src", response.image.large);
+        $("#current-price").text("Current Price: $" + currentPrice);
+        $("#circulating-supply").text("Circulating Supply: $" + circulatingSupply);
+        $("#total-supply").text("Total Supply: $" + totalSupply);
+        $("#home-page").text("Visit Us @ " + homepage);
+        $("#cryptoImg").attr("src", response.image.large);
+        $("#crypto-exchange").text("Buy Here @ " + exchange);
+
 
         database.ref().push({
             cryptoCurrentPrice: currentPrice,
@@ -58,9 +66,8 @@ $("#searchBtn").on("click", function () {
         })
     })
 
-    database.ref().on("child_added", function(childSnapshot) {
-        
 
-    });
+
+
 });
 
