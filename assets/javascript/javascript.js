@@ -24,7 +24,7 @@ var name = "";
 
 $("#searchBtn").on("click", function () {
     event.preventDefault();
-    var crypto = $("#searchInput").val().trim();
+    var crypto = $("#searchInput").val().toLowerCase().trim();
     var queryURLInformation = "https://api.coingecko.com/api/v3/coins/" + crypto;
     var queryURLExchange = "https://api.coingecko.com/api/v3/exchanges/Binance/tickers?coin_ids=" + crypto;
 
@@ -47,8 +47,8 @@ $("#searchBtn").on("click", function () {
 
         $("#cryptoImg").attr("src", image);
         $("#current-price").text("Current Price: $" + currentPrice);
-        $("#circulating-supply").text("Circulating Supply: $" + circulatingSupply);
-        $("#total-supply").text("Total Supply: $" + totalSupply);
+        $("#circulating-supply").text("Circulating Supply: " + circulatingSupply);
+        $("#total-supply").text("Total Supply: " + totalSupply);
         $("#home-page").html(`Visit Us @ <a href='${homepage}'>${homepage}</a>`);
         $("#crypto-exchange").html(`Buy Here @ <a href='${exchange}'>${exchange}</a>`);
         $("#imageText").html(description);
