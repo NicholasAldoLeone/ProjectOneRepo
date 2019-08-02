@@ -7,11 +7,11 @@ var firebaseConfig = {
     storageBucket: "",
     messagingSenderId: "727525162645",
     appId: "1:727525162645:web:bf420ddb47c0eed4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig)
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig)
 
-  database = firebase.database();
+database = firebase.database();
 
 var totalSupply = 0;
 var circulatingSupply = 0;
@@ -19,17 +19,19 @@ var currentPrice = 0;
 var exchange = "";
 var image = "";
 var homepage = "";
+var description = "";
+var name = "";
 
-$("#searchBtn").on("click", function(){
+$("#searchBtn").on("click", function () {
     event.preventDefault();
     var crypto = $("#searchInput").val().trim();
     var queryURLInformation = "https://api.coingecko.com/api/v3/coins/" + crypto;
     var queryURLExchange = "https://api.coingecko.com/api/v3/exchanges/Binance/tickers?coin_ids=" + crypto;
 
-$.ajax({
-    url: queryURLInformation, queryURLExchange,
-    method: "GET"
-}).then(function (response) {
+    $.ajax({
+        url: queryURLInformation, queryURLExchange,
+        method: "GET"
+    }).then(function (response) {
 
         currentPrice = response.market_data.current_price.usd;
         circulatingSupply = response.market_data.circulating_supply;
@@ -37,17 +39,21 @@ $.ajax({
         homepage = response.links.homepage[0];
         image = response.image.large;
         exchange = response.tickers[0].trade_url
-        
+        description = response.description.en
+        name = response.name
+
 
         console.log(response)
 
-        $("#cryptoImg").attr("src", response.image.large);
+        $("#cryptoImg").attr("src", image);
         $("#current-price").text("Current Price: $" + currentPrice);
         $("#circulating-supply").text("Circulating Supply: $" + circulatingSupply);
         $("#total-supply").text("Total Supply: $" + totalSupply);
-        $("#home-page").text("Visit Us @ " + homepage);
-        $("#cryptoImg").attr("src", response.image.large);
-        $("#crypto-exchange").text("Buy Here @ " + exchange);
+        $("#home-page").html(`Visit Us @ <a href='${homepage}'>${homepage}</a>`);
+        $("#crypto-exchange").html(`Buy Here @ <a href='${exchange}'>${exchange}</a>`);
+        $("#imageText").html(description);
+        $("#cyrpto-name-input").text(name);
+
 
 
         database.ref().push({
