@@ -20,16 +20,18 @@ $("#searchBtn").on("click", function () {
 
     //Creating variable that has a value equal to an element with an id of 'searchInput' value
     var crypto = $("#searchInput").val().toLowerCase().trim();
+    crypto = crypto.replace(" ", "-");
+    
     var queryURLInformation = "https://api.coingecko.com/api/v3/coins/" + crypto;
     var queryURLExchange = "https://api.coingecko.com/api/v3/exchanges/Binance/tickers?coin_ids=" + crypto;
-
+    
     $.ajax({
         url: queryURLInformation, queryURLExchange,
         method: "GET"
     }).then(function (response) {
-
+        
         console.log(response);
-
+        
         name = response.id;
         symbol = response.symbol;
         description = response.description.en;
@@ -73,18 +75,25 @@ $("#searchBtn").on("click", function () {
         cryptoList.append(homepage);
         cryptoList.append(exchange);
 
-        var cryptoCardFooter = $("<div>").addClass("card-footer text-muted").text("Copyright &copy")
-
-
         cryptoInfo.append(cryptoName);
         cryptoInfo.append(cryptoTitleBody);
         cryptoInfo.append(cryptoInfoImg);
         cryptoInfo.append(cryptoCardBody);
         cryptoInfo.append(cryptoList);
-        cryptoInfo.append(cryptoCardFooter);
 
         $("#cryptoInformation").prepend(cryptoInfo);
+
+        $("#searchBtn").val("");
         
+    })
+    .catch(function(error){
+        $("#alert").text("Please enter a valaid cryptocurrency")
+
+        setInterval(clearAlert, 5000);
+
+        function clearAlert() {
+            $("#alert").text("");
+        }
     })
 });
 
