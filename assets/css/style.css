@@ -57,13 +57,14 @@
   border-radius: 5px;
 }
 
-#title{
+#title {
   color: white;
 } 
 
   #cardBody{
     background-color: white;
     border-radius: 5px;
+
   }
   #information{
     background: white;
@@ -81,9 +82,18 @@
 
 .bg-primary{
  background: white;
-}
-  #cryptoGif {
-    height: 200px;
-    width: 200px;
 
-  }
+}
+#cryptoGif {
+  margin-top: 10px;
+  height: 250px;
+  width: 25%;
+
+}
+
+h1 {
+  font-size: 80px;
+  
+}
+
+
