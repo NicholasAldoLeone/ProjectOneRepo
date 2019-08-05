@@ -10,8 +10,10 @@
     border-radius: 4px;
   }
   
-  #searchBtn{
+  #searchBtn, #clearBtn, #randomBtn{
     border-radius: 4px;
+    margin-right: 4px;
+    
   }
   
   .flex-center {
@@ -32,8 +34,19 @@
   
   }
 
+  #imageText {
+    text-align: center;
+
+  }
+
   #alert {
     color: white;
     margin-right: 20px;
+
+  }
+
+  #cryptoGif {
+    height: 200px;
+    width: 200px;
 
   }
