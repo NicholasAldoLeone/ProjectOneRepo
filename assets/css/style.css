@@ -45,6 +45,43 @@
 
   }
 
+#cyrpto-name-input{
+  background: white;
+  color: black;
+  border-radius: 5px;
+}
+
+#card-name-input{
+  background-color: white;
+  color:black;
+  border-radius: 5px;
+}
+
+#title{
+  color: white;
+} 
+
+  #cardBody{
+    background-color: white;
+    border-radius: 5px;
+  }
+  #information{
+    background: white;
+    border-radius: 5px;
+  }
+
+  body{
+    background-image: url(https://i.pinimg.com/originals/25/62/95/256295e1474e10f417261fe2a4a84adb.jpg);
+  }
+
+  .jumbotron{
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+.bg-primary{
+ background: white;
+}
   #cryptoGif {
     height: 200px;
     width: 200px;

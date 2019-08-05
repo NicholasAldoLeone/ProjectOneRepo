@@ -107,6 +107,7 @@ $("#searchBtn").on("click", function () {
 
     //Creating variable that has a value equal to an element with an id of 'searchInput' value
     var crypto = $("#searchInput").val().toLowerCase().trim();
+    // replaces "spaces" with "-" for user input in search box
     crypto = crypto.replace(" ", "-");
     
     
@@ -114,17 +115,16 @@ $("#searchBtn").on("click", function () {
     
     var queryURLInformation = "https://api.coingecko.com/api/v3/coins/" + crypto;
     var queryURLExchange = "https://api.coingecko.com/api/v3/exchanges/Binance/tickers?coin_ids=" + crypto;
-    
+    // ajax call to get data from API
     $.ajax({
         url: queryURLInformation, queryURLExchange, 
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        
+        // targeting data from a specific area off the array
         name = response.id;
         symbol = response.symbol;
         description = response.description.en;
-        
         currentPrice = response.market_data.current_price.usd;
         circulatingSupply = response.market_data.circulating_supply;
         totalSupply = response.market_data.total_supply;
