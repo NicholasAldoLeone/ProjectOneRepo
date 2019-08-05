@@ -23,10 +23,11 @@
 </head>
 
 <!--start of JUMBO -->
+
 <body>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="animated lightSpeedIn">Crypto </h1>
+      <h1 class="animated lightSpeedIn" id="title">Crypto </h1>
       <p class="lead">Easy to use inferface to get all the info you need on Crypto Currency</p>
     </div>
   </div>
@@ -47,7 +48,7 @@
           <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
         </li>
       </ul>
-      <h5 id = "alert"> </h5>
+      <h5 id="alert"> </h5>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" id="searchInput" type="text" for="searchBtn" placeholder="Search">
         <button class="btn btn-secondary my-2 my-sm-0" id="searchBtn" type="submit">Search</button>
@@ -58,26 +59,22 @@
   <br>
   <br>
   <!-- end of nav -->
-
-  <div class="container" id = "cryptoInformation"> 
-    <!-- Card Body where info goes -->
-    <div class="card mb-3">
+  <!-- Card Body where info goes -->
+  <div class="container" id="cryptoInformation">
+    <div class="card mb-3" id="cardBody">
       <h3 id="cyrpto-name-input" class="card-header">Why Crypto?</h3>
-      <!-- <div class="card-body">
-        <h5 class="card-title"></h5>
-        <h6 class="card-subtitle text-muted"></h6>
-      </div> -->
+  
 
-      <!-- Image -->
+      
       <div class="card-body">
         <div class="flex-center mb-5">
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZO7INzyM51U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- Video on page -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZO7INzyM51U" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
 
-        <!-- End of Image -->
-
+     
         <p class="card-text" id="imageText">Beginners guide to CryptoCurrency. Get all the data you need to get started
           without feeling overwhemled.</p>
       </div>
@@ -87,9 +84,6 @@
       </div>
     </div>
   </div>
-
-  
-
   <!-- End of card body -->
   <!-- end of JUMBO -->
 
@@ -104,8 +98,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-
-
 
   <script src="assets/javascript/javascript.js"></script>
 

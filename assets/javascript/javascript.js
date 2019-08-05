@@ -20,22 +20,22 @@ $("#searchBtn").on("click", function () {
 
     //Creating variable that has a value equal to an element with an id of 'searchInput' value
     var crypto = $("#searchInput").val().toLowerCase().trim();
+    // replaces "spaces" with "-" for user input in search box
     crypto = crypto.replace(" ", "-");
-    
+
     var queryURLInformation = "https://api.coingecko.com/api/v3/coins/" + crypto;
     var queryURLExchange = "https://api.coingecko.com/api/v3/exchanges/Binance/tickers?coin_ids=" + crypto;
-    
+    // ajax call to get data from API
     $.ajax({
         url: queryURLInformation, queryURLExchange,
         method: "GET"
     }).then(function (response) {
-        
+
         console.log(response);
-        
+        // targeting data from a specific area off the array
         name = response.id;
         symbol = response.symbol;
         description = response.description.en;
-
         currentPrice = response.market_data.current_price.usd;
         circulatingSupply = response.market_data.circulating_supply;
         totalSupply = response.market_data.total_supply;
@@ -43,10 +43,9 @@ $("#searchBtn").on("click", function () {
         image = response.image.large;
         exchange = response.tickers[0].trade_url
 
+
         var cryptoInfo = $("<div>").attr("id", "information");
-
         var cryptoName = $("<h3>").attr("id", "card-name-input").addClass("card-header").text(name);
-
         var cryptoTitleBody = $("<div>").addClass("card-body");
         var specialTitle = $("<h5>").addClass("card-title").text(symbol);
 
@@ -80,20 +79,23 @@ $("#searchBtn").on("click", function () {
         cryptoInfo.append(cryptoInfoImg);
         cryptoInfo.append(cryptoCardBody);
         cryptoInfo.append(cryptoList);
-
+        
+        
+        // info gets dumped here//
         $("#cryptoInformation").prepend(cryptoInfo);
 
-        $("#searchBtn").val("");
         
-    })
-    .catch(function(error){
-        $("#alert").text("Please enter a valaid cryptocurrency")
+        $("#searchBtn").val("");
 
-        setInterval(clearAlert, 5000);
-
-        function clearAlert() {
-            $("#alert").text("");
-        }
     })
+        // creating an alert when user searches for something not in the API 
+        .catch(function (error) {
+            $("#alert").text("Please enter a valaid cryptocurrency")
+            // sets an alert for 5 sec. then dissappears
+            setInterval(clearAlert, 5000);
+            function clearAlert() {
+                $("#alert").text("");
+            }
+        })
 });
 
