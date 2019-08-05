@@ -36,8 +36,8 @@ function generateCryptoInformation() {
     var price = $("<li>").attr("id", "current-price").addClass("list-group-item").text("Current Price: " + currentPrice);
     var circulating = $("<li>").attr("id", "circulating-supply").addClass("list-group-item").text("Circulating Supply: " + circulatingSupply);
     var total = $("<li>").attr("id", "total-supply").addClass("list-group-item").text("Total Supply: " + totalSupply);
-    var homepageLink = $("<li>").attr("id", "homepage").addClass("list-group-item").html(`Visit Us @ <a href ='${homepage}'>${homepage}</a>`);
-    var exchangeLink = $("<li>").attr("id", "exchange").addClass("list-group-item").html(`Buy here @ <a href ='${exchange}'>${exchange}</a>`);
+    var homepageLink = $("<li>").attr("id", "homepage").addClass("list-group-item").html(`Visit Us @ <a href ='${homepage}'target = "_blank">${homepage}</a>`);
+    var exchangeLink = $("<li>").attr("id", "exchange").addClass("list-group-item").html(`Buy here @ <a href ='${exchange}'target = "_blank">${exchange}</a>`);
 
     cryptoList.append(price);
     cryptoList.append(circulating);
@@ -82,8 +82,8 @@ for (var i = 0; i < sessionStorage.length; i++) {
     var price = $("<li>").attr("id", "current-price").addClass("list-group-item").text("Current Price: " + obj.currentPrice);
     var circulating = $("<li>").attr("id", "circulating-supply").addClass("list-group-item").text("Circulating Supply: " + obj.circulatingSupply);
     var total = $("<li>").attr("id", "total-supply").addClass("list-group-item").text("Total Supply: " + obj.totalSupply);
-    var homepageLink = $("<li>").attr("id", "homepage").addClass("list-group-item").html(`Visit Us @ <a href ='${obj.homepage}'>${obj.homepage}</a>`);
-    var exchangeLink = $("<li>").attr("id", "exchange").addClass("list-group-item").html(`Buy here @ <a href ='${obj.exchange}'>${obj.exchange}</a>`);
+    var homepageLink = $("<li>").attr("id", "homepage").addClass("list-group-item").html(`Visit Us @ <a href ='${obj.homepage}'target = "_blank">${obj.homepage}</a>`);
+    var exchangeLink = $("<li>").attr("id", "exchange").addClass("list-group-item").html(`Buy here @ <a href ='${obj.exchange}'target = "_blank">${obj.exchange}</a>`);
 
     cryptoList.append(price);
     cryptoList.append(circulating);

@@ -59,7 +59,12 @@
 
 #title{
   color: white;
+  
 } 
+
+h1{
+  font-size: 80px;
+}
 
   #cardBody{
     background-color: white;
@@ -75,7 +80,7 @@
   }
 
   .jumbotron{
-    background: rgba(0, 0, 0, 0.8);
+    background: #071a41aa;
     color: white;
   }
 
@@ -83,7 +88,10 @@
  background: white;
 }
   #cryptoGif {
-    height: 200px;
-    width: 200px;
-
+    height: 250px;
+    width: 25%;
+  
   }
+.list-group{
+  padding-bottom: 10px;
+}
