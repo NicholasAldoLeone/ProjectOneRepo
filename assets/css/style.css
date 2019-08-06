@@ -13,6 +13,7 @@
   #searchBtn, #clearBtn, #randomBtn{
     border-radius: 4px;
     margin-right: 4px;
+   
     
   }
   
@@ -22,10 +23,14 @@
     justify-content: center;
   }
 
-  
+  .card {
+    border-radius: 5px;
+  }
+
   #cryptoInformation {
     align-items: center;
     justify-content: center;
+   
 
   }
 
@@ -59,7 +64,16 @@
 
 #title {
   color: white;
+  
 } 
+
+h1{
+  font-size: 100px;
+}
+
+h7{
+  font-size: 20px;
+}
 
   #cardBody{
     background-color: white;
@@ -72,28 +86,42 @@
   }
 
   body{
-    background-image: url(https://i.pinimg.com/originals/25/62/95/256295e1474e10f417261fe2a4a84adb.jpg);
+    background-image: url(https://sociable.co/wp-content/uploads/2017/08/blockchain-app.jpg);
+   
   }
 
   .jumbotron{
-    background: rgba(0, 0, 0, 0.8);
+    background: #01355e00;
     color: white;
+    padding-bottom: 0px;
+    text-align: center;
+    text-shadow: 3px 2px 0 #000, 3px 2px 0 #000, 3px 2px 0 #000, 1px 1px 0 #000;
   }
 
 .bg-primary{
  background: white;
-
+ color: white;
 }
-#cryptoGif {
-  margin-top: 10px;
-  height: 250px;
-  width: 25%;
-
-}
-
-h1 {
-  font-size: 80px;
+  #cryptoGif {
+    margin-top: 5px;
+    height: 250px;
+    width: 25%;
   
+  }
+.list-group{
+  padding-bottom: 10px;
 }
 
+.btn{
+  background:#071a41aa;
+  color: white;
 
+}
+
+p{
+  text-align: center;
+}
+
+#gifBtn{
+  width: 100%;
+}
