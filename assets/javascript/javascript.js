@@ -55,8 +55,6 @@ function generateCryptoInformation() {
 
 }
 
-
-
 for (var i = 0; i < sessionStorage.length; i++) {
     var obj = JSON.parse(sessionStorage.getItem(sessionStorage.key(i)));
 
@@ -109,7 +107,6 @@ $("#searchBtn").on("click", function () {
     var crypto = $("#searchInput").val().toLowerCase().trim();
     // replaces "spaces" with "-" for user input in search box
     crypto = crypto.replace(" ", "-");
-    
     
     $("#searchInput").val("");
     
@@ -191,8 +188,8 @@ $("#gifBtn").on("click", function () {
 });
 
 $("#randomBtn").on("click", function(){
-    var queryURLCoins = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd"
     event.preventDefault();
+    var queryURLCoins = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd"
 
     $.ajax({
         url: queryURLCoins,

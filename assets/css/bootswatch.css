@@ -175,8 +175,9 @@
  }
  
  a:not([href]):not([tabindex]) {
-   color: inherit;
+   color: white;
    text-decoration: none;
+   font-weight: bold;
  }
  
  a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
